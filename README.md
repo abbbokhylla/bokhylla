@@ -22,3 +22,25 @@ npm run lint
 
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
+
+
+### For Arduino:
+Make sure you have intalled the Arduino Library 
+```
+EspMQTTClient
+```
+Change the Client Credentials to your own information (Make sure to pick a good client name!)
+```
+EspMQTTClient client(
+ "ABB_Indgym_Guest",           // Wifi ssid                       CHANGE THIS
+  "Welcome2abb",           // Wifi password                       CHANGE THIS
+  "maqiatto.com",  // MQTT broker ip                              
+  1883,             // MQTT broker port
+  "william.johansson@abbindustrigymnasium.se", // MQTT username   CHANGE THIS
+  "creativetalk",       // MQTT password                          CHANGE THIS
+  "william1",          // Client name                             CHANGE THIS
+  onConnectionEstablished, // Connection established callback
+  true,             // Enable web updater
+  true              // Enable debug messages
+);
+```
