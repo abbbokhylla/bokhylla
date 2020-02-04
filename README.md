@@ -28,7 +28,7 @@ npm run lint
 See [Configuration Reference](https://cli.vuejs.org/config/).
 
 
-### For Arduino:
+# For Arduino:
 Make sure you have installed the Arduino Library 
 ```
 EspMQTTClient
@@ -48,3 +48,10 @@ EspMQTTClient client(
   true              // Enable debug messages
 );
 ```
+
+
+# MQTT
+We recopmmend using the Internet broker MaQiaTTo, https://maqiatto.com .
+Cretae an account, and your broker will be automatically created for you. You just follow the steps on the page
+and you will get going right away.
+To make the broker work with the Node-MCU, use the Arduino-code and swap out the crednetials for your own!
