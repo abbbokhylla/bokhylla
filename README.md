@@ -25,7 +25,7 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
 
 
 ### For Arduino:
-Make sure you have intalled the Arduino Library 
+Make sure you have installed the Arduino Library 
 ```
 EspMQTTClient
 ```
