@@ -4,6 +4,10 @@
 ```
 npm install
 ```
+### If something isn´t up to date
+```
+npm audit fix
+```
 
 ### Compiles and hot-reloads for development
 ```
