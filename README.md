@@ -52,6 +52,6 @@ EspMQTTClient client(
 
 # MQTT
 We recopmmend using the Internet broker MaQiaTTo, https://maqiatto.com .
-Cretae an account, and your broker will be automatically created for you. You just follow the steps on the page
+Create an account, and your broker will be automatically created for you. Just follow the steps on the page
 and you will get going right away.
-To make the broker work with the Node-MCU, use the Arduino-code and swap out the crednetials for your own!
+To make the broker work with Node-MCU, use the Arduino-code and swap out the crednetials for your own!
