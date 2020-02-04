@@ -91,7 +91,7 @@ export default {
 
       this.funfactstext = this.facts[random];
 
-      this.facts= data.items.item;
+      this.facts= this.data.items.item;
     }
   },
   data() {
