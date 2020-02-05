@@ -1,3 +1,7 @@
+<template>
+    <v-btn @click="fetch" id="funfactsbtn" tile outlined > fun facts btn </v-btn>
+</template>
+
 <script>
 const axios = require('axios').default;
 export default {
@@ -10,3 +14,11 @@ methods:{
  }
 }
 </script>
+
+<style scoped>
+#funfactsbtn {
+    color: white;
+    width: 300px;
+    padding: 25px;
+}
+</style>
