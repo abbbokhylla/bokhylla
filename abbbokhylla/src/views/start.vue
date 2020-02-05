@@ -16,11 +16,9 @@
           <div>
             <!-- space mellan rutorna -->
             <v-container class="grey lighten-5">
-              <v-btn id="funfacts" @click="funfactsknapp" tile outlined>
-                {{ funfactstext }}
-
-                <!-- <br/> -->
-              </v-btn>
+              
+    <funfacts/>
+             
             </v-container>
           </div>
 
@@ -71,20 +69,15 @@
 <script>
 import colorpicker from "../components/colorpicker";
 
+import funfacts from "../components/funfacts";
 export default {
   components: {
-    colorpicker
+    colorpicker,
+      funfacts ,
   },
 
   methods: {
-    funfactsknapp() {
-      let random = Math.floor(Math.random() * this.facts.length);
-
-      this.funfactstext = this.data[random];
-      // this.funfactstext = this.facts[random];
-
-      this.facts= this.data.items.item;
-    }
+  
   },
   data() {
     return {
@@ -128,13 +121,7 @@ export default {
   padding: 25px !important;
 }
 
-#funfacts {
-  color: white !important;
-  font-size: 1em;
-  width: 300px;
-  height: 250px;
-  padding: 25px !important;
-}
+
 
 #colorpicker {
   padding: 25px !important;

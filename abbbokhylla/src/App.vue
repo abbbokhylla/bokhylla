@@ -1,16 +1,14 @@
 <template>
   <div id="app">
     <router-view />
-    <funfacts/>
     <color-picker v-model="color"></color-picker>
   </div>
 </template>
 
 <script>
-import funfacts from "./components/funfacts";
 // import colorpicker from '@radial-color-picker/vue-color-picker';
 export default {
-  components: { funfacts },
+ 
   // components: { colorpicker },
   name: "app",
   data() {
