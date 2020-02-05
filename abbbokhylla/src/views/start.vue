@@ -83,8 +83,6 @@ export default {
       this.funfactstext = this.data[random];
       // this.funfactstext = this.facts[random];
 
-      // this.facts.items.item= data;
-
       this.facts= this.data.items.item;
     }
   },
