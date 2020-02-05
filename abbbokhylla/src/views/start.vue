@@ -16,9 +16,7 @@
           <div>
             <!-- space mellan rutorna -->
             <v-container class="grey lighten-5">
-              
-    <funfacts/>
-             
+              <funfacts />
             </v-container>
           </div>
 
@@ -44,9 +42,9 @@
           <!-- <div>
             <v-btn to="/testing">test</v-btn>
           </div> -->
-          <v-flex class="mitten" v-if="visa == true" xs11>
-            <v-row justify="space-around">
-              <v-col md="5" class="ml-md-auto">
+          <v-flex class="mitten" v-if="visa == true" xs12>
+            <v-row justify="center" xs12>
+              <v-col md="5">
                 <div id="app">
                   <color-picker
                     id="colorpicker"
@@ -68,17 +66,15 @@
 
 <script>
 import colorpicker from "../components/colorpicker";
-
 import funfacts from "../components/funfacts";
+
 export default {
   components: {
     colorpicker,
-      funfacts ,
+    funfacts
   },
 
-  methods: {
-  
-  },
+  methods: {},
   data() {
     return {
       // facts: ["0", "1", "2", "3", "4", "5"],
@@ -121,9 +117,9 @@ export default {
   padding: 25px !important;
 }
 
-
-
 #colorpicker {
   padding: 25px !important;
+  margin: auto;
+  justify-content: center !important;
 }
 </style>

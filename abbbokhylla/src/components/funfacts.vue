@@ -52,7 +52,7 @@ div {
   width: 300px;
   height: 250px;
 
-  border: white 1px solid;
+  border: white 0.5px solid;
   line-height: 250px;
   text-align: center;
 }
