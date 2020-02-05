@@ -16,16 +16,10 @@
           <div>
             <!-- space mellan rutorna -->
             <v-container class="grey lighten-5">
-              <v-btn
-                id="funfacts"
-                @click="funfactsknapp"
-                tile
-                outlined
-                color="white"
-              >
+              <v-btn id="funfacts" @click="funfactsknapp" tile outlined>
                 {{ funfactstext }}
 
-                <!-- frewgew geögewrö <br/> fkanafa jgrwekgwe -->
+                <!-- <br/> -->
               </v-btn>
             </v-container>
           </div>
@@ -40,7 +34,6 @@
                     @click="visa = !visa"
                     tile
                     outlined
-                    color="white"
                     v-on="on"
                   >
                     Ändra färg
@@ -77,26 +70,27 @@
 
 <script>
 import colorpicker from "../components/colorpicker";
-// import funfacts from "../components/funfacts";
 
 export default {
   components: {
-    colorpicker,
-    // funfacts,
+    colorpicker
   },
 
   methods: {
     funfactsknapp() {
       let random = Math.floor(Math.random() * this.facts.length);
 
-      this.funfactstext = this.facts[random];
+      this.funfactstext = this.data[random];
+      // this.funfactstext = this.facts[random];
 
-      this.facts= data.items.item;
+      // this.facts.items.item= data;
+
+      this.facts= this.data.items.item;
     }
   },
   data() {
     return {
-      facts: ["0", "1", "2", "3", "4", "5"],
+      // facts: ["0", "1", "2", "3", "4", "5"],
       visa: false,
       funfacts: false,
       funfactstext: "tryck för fun facts"

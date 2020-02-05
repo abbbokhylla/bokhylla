@@ -1,8 +1,3 @@
-<template>
-   <v-btn @click="fetch"> </v-btn>
-
-</template>
-
 <script>
 const axios = require('axios').default;
 export default {
@@ -15,7 +10,3 @@ methods:{
  }
 }
 </script>
-
-<style>
-
-</style>
