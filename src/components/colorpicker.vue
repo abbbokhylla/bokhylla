@@ -144,15 +144,15 @@ export default {
       this.B = rgb[2];
       this.client.publish(
         "william.johansson@abbindustrigymnasium.se/r1",
-        this.R
+        this.R.toString()
       );
       this.client.publish(
         "william.johansson@abbindustrigymnasium.se/g1",
-        this.G
+        this.G.toString()
       );
       this.client.publish(
         "william.johansson@abbindustrigymnasium.se/b1",
-        this.B
+        this.B.toString()
       );
     }
   }

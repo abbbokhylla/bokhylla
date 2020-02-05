@@ -13,10 +13,11 @@
     "core-js": "^3.4.4",
     "fibers": "^4.0.2",
     "mqtt": "^3.0.0",
-    "node-sass": "^4.13.0",
+    "node-sass": "^4.13.1",
     "vue": "^2.6.10",
     "vue-mqtt": "^2.0.3",
     "vue-router": "^3.1.5",
+    "vue-slider-component": "^3.1.0",
     "vuetify": "^2.1.0"
   },
   "devDependencies": {
