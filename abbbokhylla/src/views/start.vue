@@ -13,11 +13,20 @@
               </v-list-item>
             </v-card>
           </v-flex>' -->
-
           <div>
             <!-- space mellan rutorna -->
             <v-container class="grey lighten-5">
-              <v-btn id="färg" tile outlined color="white"> fun facts </v-btn>
+              <v-btn
+                id="funfacts"
+                @click="funfactsknapp"
+                tile
+                outlined
+                color="white"
+              >
+                {{ funfactstext }}
+
+                <!-- frewgew geögewrö <br/> fkanafa jgrwekgwe -->
+              </v-btn>
             </v-container>
           </div>
 
@@ -27,7 +36,7 @@
               <v-menu transition="scale-transition" origin="center center">
                 <template v-slot:activator="{ on }">
                   <v-btn
-                    id="färg"
+                    id="ändrafärg"
                     @click="visa = !visa"
                     tile
                     outlined
@@ -40,6 +49,7 @@
               </v-menu>
             </v-container>
           </div>
+
           <!-- <div>
             <v-btn to="/testing">test</v-btn>
           </div> -->
@@ -47,7 +57,11 @@
             <v-row justify="space-around">
               <v-col md="5" class="ml-md-auto">
                 <div id="app">
-                  <color-picker v-bind="color" @input="onInput"></color-picker>
+                  <color-picker
+                    id="colorpicker"
+                    v-bind="color"
+                    @input="onInput"
+                  ></color-picker>
                   <pre v-html="color"></pre>
                 </div>
               </v-col>
@@ -63,30 +77,40 @@
 
 <script>
 import colorpicker from "../components/colorpicker";
+// import funfacts from "../components/funfacts";
 
 export default {
   components: {
-    colorpicker
+    colorpicker,
+    // funfacts,
+  },
+
+  methods: {
+    funfactsknapp() {
+      let random = Math.floor(Math.random() * this.facts.length);
+
+      this.funfactstext = this.facts[random];
+
+      this.facts= this.data.items.item;
+    }
   },
   data() {
     return {
-      visa: false
+      facts: ["0", "1", "2", "3", "4", "5"],
+      visa: false,
+      funfacts: false,
+      funfactstext: "tryck för fun facts"
     };
   }
 };
 </script>
 
 <style scoped>
-.v-btn {
-  font-size: 1em;
-  width: 300px;
-  padding: 25px !important;
-}
-#id-större {
-  /* font-size: 1.5em; */
+/* #större {
+  font-size: 1.5em;
   width: 100px;
   padding: 100px !important;
-}
+} */
 
 .mitten {
   display: flex;
@@ -105,11 +129,22 @@ export default {
   margin-top: 40px;
 }
 
-#id-settings {
-  color: blue;
+#ändrafärg {
+  color: white !important;
+  font-size: 1em;
+  width: 300px;
+  padding: 25px !important;
 }
 
-#id-färg {
-  color: #f8f8f8 !important;
+#funfacts {
+  color: white !important;
+  font-size: 1em;
+  width: 300px;
+  height: 250px;
+  padding: 25px !important;
+}
+
+#colorpicker {
+  padding: 25px !important;
 }
 </style>
