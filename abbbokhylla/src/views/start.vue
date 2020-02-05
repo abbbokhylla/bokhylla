@@ -44,20 +44,22 @@
           </div> -->
           <v-flex class="mitten" v-if="visa == true" xs12>
             <v-row justify="center" xs12>
-              <v-col md="5">
-                <div id="app">
-                  <color-picker
+              <v-col  md="12">
+                <div class="color-picker-input">
+                  <!-- <color-picker
                     id="colorpicker"
                     v-bind="color"
                     @input="onInput"
-                  ></color-picker>
+                  ></color-picker> -->
+                  <colorpicker />
                   <pre v-html="color"></pre>
                 </div>
               </v-col>
 
-              <colorpicker />
+              
             </v-row>
           </v-flex>
+
         </v-col>
       </v-row>
     </v-layout>
@@ -95,8 +97,8 @@ export default {
 
 .mitten {
   display: flex;
-  align-items: center;
-  justify-content: center;
+  align-items: center !important;
+  justify-content: center !important;
 }
 
 #app {
@@ -121,5 +123,11 @@ export default {
   padding: 25px !important;
   margin: auto;
   justify-content: center !important;
+}
+
+.color-picker-input {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 </style>
