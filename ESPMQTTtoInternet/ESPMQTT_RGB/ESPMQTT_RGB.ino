@@ -63,44 +63,6 @@ void drgb(String stat){
 
 void onConnectionEstablished()
 {
-/*
-
-
-  client.subscribe("william.johansson@abbindustrigymnasium.se/brightness1", [] (const String &payload) //För andra delen av hyllan, ändra 'brightness1' till 'brightness2'
-  {
-    Serial.println(payload);
-   int pwmVal= payload.toInt();
-    // analogWrite(r_pin, pwmVal);
-    // analogWrite(g_pin, pwmVal);
-    // analogWrite(b_pin, pwmVal);
-    rgb(pwmVal,pwmVal, pwmVal);
-    client.publish("william.johansson@abbindustrigymnasium.se/brightness1", "Ljusstyrka ändrad till " + pwmVal);
-  });
-  
-  client.publish("william.johansson@abbindustrigymnasium.se/lamp", "This is a message");
-
-  client.executeDelayed(5 * 1000, []() {
-    client.publish("william.johansson@abbindustrigymnasium.se/lamp", "This is a message sent 5 seconds later");
-  });
- client.subscribe("william.johansson@abbindustrigymnasium.se/status1", [] (const String &payload) {
-  if(payload == "off"){
-    // digitalWrite(r_pin, LOW);
-    // digitalWrite(g_pin, LOW);
-    // digitalWrite(b_pin, LOW);
-    rgb(0,0,0);
-    Serial.println("Ljus av!");
-    client.publish("william.johansson@abbindustrigymnasium.se/status1", "LJUS AV");
-  }
-  
-  else if(payload == "on"){
-    digitalWrite(r_pin, HIGH);
-    digitalWrite(g_pin, HIGH);
-    digitalWrite(b_pin, HIGH);
-    Serial.println("Ljus på!");
-    client.publish("william.johansson@abbindustrigymnasium.se/status1", "LJUS PÅ");
-  }
-  } );*/
-
   client.subscribe("william.johansson@abbindustrigymnasium.se/r1", [] (const String &payload){
    int Rval = payload.toInt()*4;
    R(Rval);
