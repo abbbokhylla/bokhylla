@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <router-view />
-    <color-picker v-model="color"></color-picker>
+    <!-- <color-picker v-model="color"></color-picker> -->
   </div>
 </template>
 

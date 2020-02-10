@@ -34,6 +34,8 @@
                   >
                     Ändra färg
                   </v-btn>
+
+
                 </template>
               </v-menu>
             </v-container>
@@ -44,18 +46,11 @@
           </div> -->
           <v-flex class="mitten" v-if="visa == true" xs12>
             <v-row justify="center" xs12>
-              <v-col  md="12">
+              <v-col md="12">
                 <div class="color-picker-input">
-                  <!-- <color-picker
-                    id="colorpicker"
-                    v-bind="color"
-                    @input="onInput"
-                  ></color-picker> -->
-                  <colorpicker />
-                  <pre v-html="color"></pre>
+                  <colorpicker  />
                 </div>
               </v-col>
-
               
             </v-row>
           </v-flex>
